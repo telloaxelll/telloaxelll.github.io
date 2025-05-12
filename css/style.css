@@ -200,3 +200,19 @@ footer {
     height: 80px;
   }
 }
+
+.project {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.project h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.project p {
+  margin-top: 8px;
+  color: #333;
+}
