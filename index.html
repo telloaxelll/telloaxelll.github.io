@@ -2,173 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Axel Muñiz Tello</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Georgia', serif;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.7;
-      padding-bottom: 40px;
-    }
-
-    .header-container {
-        display: flex;
-        align-items: center;
-        justify-content: center; /* This centers horizontally */
-        gap: 20px;
-        flex-wrap: wrap;
-        padding: 40px 20px 30px;
-        max-width: 800px;
-        margin: 0 auto; /* This keeps the whole container centered */
-    }
-    .profile-pic {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        object-position: 50% 30%; /* Adjust this to center the image on your face */
-        border-radius: 50%;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .profile-pic {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .header-text {
-      text-align: left;
-    }
-
-    .header-text h1 {
-      font-size: 2em;
-      font-weight: 600;
-    }
-
-    .header-text p {
-      font-size: 1em;
-      color: #666;
-      margin-top: 10px;
-    }
-
-    nav {
-      text-align: center;
-      padding: 15px 0;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-      margin-bottom: 30px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.2s ease-in-out;
-    }
-
-    nav a:hover {
-      color: #0077cc;
-    }
-
-    section {
-      width: 90%;
-      max-width: 700px;
-      margin: 0 auto 40px;
-    }
-
-    section h2 {
-      margin-bottom: 15px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
-      font-size: 1.4em;
-    }
-
-    ul {
-      list-style: disc;
-      padding-left: 20px;
-      margin-top: 10px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: #0077cc;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: #999;
-      border-top: 1px solid #eee;
-      padding: 30px 10px 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
 <header>
-  <div class="header-container">
-    <img src="images/axel.jpeg" alt="Axel Muñiz Tello" class="profile-pic">
-    <div class="header-text">
+  <div class="header-container" style="justify-content: center;">
+    <div class="header-text" style="text-align: center;">
       <h1>Axel Muñiz Tello</h1>
-      <p>Undergraduate Student, Applied Mathematics<br>University of California, Merced</p>
+      <p>B.S. in Applied Mathematics<br>University of California, Merced</p>
     </div>
   </div>
 </header>
 
+
 <nav>
-  <a href="#About">About</a>
-  <a href="#Research">Research</a>
-  <a href="#Publications">Publications</a>
-  <a href="#Contact">Contact</a>
+  <a href="index.html">About</a>
+  <a href="research.html">Research</a>
+  <a href="publications.html">Publications</a>
+  <a href="#contact.html">Contact</a>
 </nav>
 
 <section id="About">
-  <h2>About</h2>
-  <p>Hello, my name is Axel. I am a third-year Applied Mathematics major, emphasizing computational and data sciences at the University of California, Merced.  
-     I am interested in using mathematics to model and solve real-world problems. My academic interests include:
-  </p>
-  <ul>
-    <li>Data Science</li>
-    <li>Machine Learning</li>
-    <li>Statistical Analysis</li>
-    <li>Mathematical Modeling</li>
-    <li>Numerical Methods</li>
-    <li>Scientific Computing</li>
-  </ul>
+  <div class="about-container">
+    <div class="about-image">
+      <img src="images/axel.jpeg" alt="Axel Muñiz Tello" />
+    </div>
+    <div class="about-text">
+      <h2>About</h2>
+      <p>
+        Hi there, I’m Axel. I’m an Applied Mathematics student at UC Merced, specializing in Computational and Data Science. My academic and research interests lie at the 
+        intersection of data science, machine learning, mathematical modeling, and dynamical systems.
+      </p>
+      <p><br>
+        I’m currently conducting research on how Adaptive Cruise Control (ACC) systems can learn and adapt to dynamic environments using data-driven techniques like Recursive Least Squares (RLS), system identification, and other methodologies. I’ve also worked on modeling ecological systems, using SINDy and 
+        least squares methods to estimate parameters in predator-prey dynamics in the Lotka-Volterra predator-prey systems.
+      </p>
+      <p><br>
+        I was recently awarded a research fellowship through the National Institutes of Health to further develop my work in dynamical system learning. Through this opportunity, I’m focused on exploring 
+        how mathematical theory can be integrated with modern computational tools to simulate, analyze, and optimize 
+        real-world systems.
+      </p>
+      <p><br>
+        I’m seeking research opportunities or collaborations in applied mathematics, AI for control systems, or data-driven modeling. Long-term, I aim to contribute to the advancement of intelligent systems grounded in rigorous mathematical foundations.
+
+        I look forward to connecting with you and learning from others in the field.
+      </p>
+
+    </div>
+  </div>
 </section>
 
-<section id="Research">
-  <h2>Research</h2>
-  <p>My current research interests include numerical linear algebra, data-driven modeling, and applications of differential equations. I am involved in projects related to population modeling and scientific computing.</p>
-</section>
 
-<section id="Publications">
-  <h2>Publications</h2>
-  <ul>
-    <li><strong>Sample Paper Title</strong> - Journal Name, Year. <a href="#">[PDF]</a></li>
-    <li><strong>Another Paper</strong> - Conference Name, Year. <a href="#">[PDF]</a></li>
-  </ul>
-</section>
-
-<section id="Contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:amuniztello@ucmerced.edu">amuniztello@ucmerced.edu</a></p>
-  <p><a href="https://www.linkedin.com/in/axel-tello/">LinkedIn Profile</a></p>
-</section>
 
 <footer>
   <p>&copy; 2025 Axel Muñiz Tello</p>
