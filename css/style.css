@@ -184,3 +184,19 @@ footer {
   border-left: 6px solid #0077cc; /* Blue line */
   padding-left: 30px;
 }
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-text h1 {
+    font-size: 1.5em;
+  }
+
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+}
