@@ -1,14 +1,19 @@
+/*
+  Neutral colour palette used across the site. The palette
+  focuses on soft browns and greys to give the pages a
+  professional, minimal aesthetic.
+*/
 :root {
-  --bg: #f9f9f9;
-  --text: #1a1a1a;
-  --muted: #ffffff;
-  --link: #005f99;
-  --hover: #0077cc;
-  --border: #ddd;
+  --bg: #f5f4f2;
+  --text: #2b2b2b;
+  --muted: #dcd7d2;
+  --link: #5c4f45;
+  --hover: #3e352f;
+  --border: #c7c2bc;
   --white: #ffffff;
-  --dark-bg: #4a4a4a;
-  --dark-bg-secondary: #4a4a4a;
-  --light-text: #ffffff;
+  --dark-bg: #2c2a29;
+  --dark-bg-secondary: #2c2a29;
+  --light-text: #f5f5f5;
 }
 
 * {
@@ -18,7 +23,7 @@
 }
 
 body {
-  font-family: Georgia, serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
@@ -30,7 +35,7 @@ body {
   color: var(--light-text);
   padding: 15px 0;
   text-align: center;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid var(--dark-bg);
 }
 
 .profile-pic {
@@ -46,6 +51,7 @@ body {
   margin-top: 10px;
   margin-bottom: 0;
   padding: 0;
+  text-align: center;
 }
 
 .header-text h1 {
@@ -167,14 +173,14 @@ footer {
 }
 
 #About {
-  border-left: 6px solid #4a4a4a;
+  border-left: 6px solid var(--dark-bg);
   padding-left: 30px;
 }
 
 .project {
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border);
 }
 
 .project h3 {
@@ -184,20 +190,20 @@ footer {
 
 .project p {
   margin-top: 8px;
-  color: #333;
+  color: var(--text);
 }
 
 .press-section {
-  background-color: #f1f1f1;
+  background-color: var(--muted);
   padding: 40px 20px;
   text-align: left;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--border);
 }
 
 .press-section h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--text);
 }
 
 .press-item {
@@ -205,11 +211,12 @@ footer {
 }
 
 .press-item a {
-  color: #005f99;
+  color: var(--link);
   text-decoration: none;
 }
 
 .press-item a:hover {
+  color: var(--hover);
   text-decoration: underline;
 }
 
