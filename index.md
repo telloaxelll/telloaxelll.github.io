@@ -16,7 +16,7 @@ I am an undergraduate researcher in Applied Mathematics at the University of Cal
 
 ## News
 
-- **[Jul. 2025]** Featured in *The Mercury News* in an article on the impact of science funding cuts, highlighting my research efforts and challenges. 
+- **[Jul. 2025]** Featured in *The Mercury News* in an article on the impact of science funding cuts, highlighting my research efforts and challenges [Article]("https://www.mercurynews.com/2025/07/19/cuts-to-science-grants-force-san-jose-researchers-student-to-scramble/"). 
 
 {% include_relative _includes/publications.md %}
 
