@@ -1,26 +1,26 @@
 # Basic Information 
-title: Your Name
-position: Ph.D. Student
-affiliation: Your Affiliation
-email: yourname (at) example.edu
+title: Axel Muniz Tello
+position: Undergraduate Researcher
+affiliation: University of California, Merced
+email: amuniztello@ucmerced.edu
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: minimal light
-description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://minimal-light-theme.yliu.me/
+keywords: keywords: Axel Tello, UC Merced, Computational Mathematics, Data Science, Adaptive Cruise Control, Machine Learning, Researcher
+description: Axel Muniz Tello — Undergraduate researcher at UC Merced studying applied and computational mathematics, data science, and control systems.
+canonical: https://www.telloaxel.com
 
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
 google_scholar: https://scholar.google.com/
-cv_link: assets/files/curriculum_vitae.pdf
-github_link: https://github.com/
-linkedin: https://www.linkedin.com/
+#cv_link: assets/files/curriculum_vitae.pdf <<-- To be added later -->>
+github_link: https://github.com/telloaxelll
+linkedin: https://www.linkedin.com/in/axel-tello/
 twitter: https://twitter.com/
 
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
-avatar: ./assets/img/avatar.png
+avatar: ./assets/img/IMG_6997.jpeg
 favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
 
@@ -38,7 +38,7 @@ font: "Serif" # or "Sans Serif"
 
 # Google Analytics ID
 # Please remove this if you don't use Google Analytics
-google_analytics: UA-111540567-4
+google_analytics: G-QMXBQ9PVFZ
 
 # Use this project as a remote theme for GitHub Pages
 # See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
