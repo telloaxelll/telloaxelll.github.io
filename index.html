@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axel Muñiz Tello - UC Merced</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafcfe;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+            border-bottom: none;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            color: white;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #dbeafe;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 400;
+            transition: color 0.2s;
+            padding: 0.5rem 1rem;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: #1e40af;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2.5rem;
+            border-radius: 0;
+        }
+
+        section h2 {
+            color: #1e40af;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(90deg, #1e40af 0%, #3b82f6 100%) border-box;
+            border-image-slice: 1;
+            font-weight: 400;
+            letter-spacing: -0.3px;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            flex-shrink: 0;
+            border: none;
+        }
+
+        .bio {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .education-item, .project-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .education-item:last-child, .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .education-item h3, .project-item h3 {
+            color: #1a1a1a;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .education-item .details, .project-item .details {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-category {
+            background-color: transparent;
+            padding: 1.5rem;
+            border-radius: 0;
+            border-left: 3px solid;
+            border-image: linear-gradient(180deg, #1e40af 0%, #3b82f6 100%) 1;
+        }
+
+        .skill-category h3 {
+            color: #1e40af;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.3rem 0;
+            color: #666;
+        }
+
+        .skill-category li:before {
+            content: "• ";
+            color: #999;
+            font-weight: normal;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            background-color: transparent;
+            border-radius: 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-item strong {
+            color: #1e40af;
+            min-width: 100px;
+            font-weight: 500;
+        }
+
+        .contact-item a {
+            color: #1a1a1a;
+            text-decoration: underline;
+            text-decoration-color: #dbeafe;
+            transition: all 0.2s;
+        }
+
+        .contact-item a:hover {
+            text-decoration-color: #1e40af;
+            color: #1e40af;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+            border-top: none;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Axel Muñiz Tello</h1>
+        <p>Undergraduate Researcher | UC Merced</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="images/axel.jpeg" alt="Profile Photo" style="width: 300px; height: 300px; border-radius: 50%; object-fit: cover; object-position: 100% 50%;">
+                <div class="bio">
+                    <p>Hi! I'm Axel, an undergraduate researcher at the University of California, Merced, pursuing a degree in applied mathematics. My research interests lie at the intersection of machine learning, dynamical systems, control theory, and numerical analysis, with a focus on numerical linear algebra.</p>
+                    <p style="margin-top: 1rem;">I'm passionate about using machine learning, and control theory to address challenges in autonomous vehicles. Currently, I'm working on researching ill conditioned matrices and their effects on autonomous vehicles and exploring opportunities to contribute to safety quantification in autonomous vehicles.</p>
+                    <p style="margin-top: 1rem;"><strong>Research Interests:</strong> Machine Learning • Control Theory • Dynamical Systems • Numerical Analysis</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Undergraduate Researcher</h2>
+            <div class="project-item">
+                <h3>[Research Project Title]</h3>
+                <div class="details">[Lab/Institution] | [Advisor: Professor Name] | [Start Date - End Date/Present]</div>
+                <p><strong>Research Focus:</strong> Brief description of your research project, including the problem you're investigating, methodologies you're using, and the significance of the work.</p>
+                <p style="margin-top: 0.5rem;"><strong>Key Contributions:</strong> Highlight your specific contributions to the project, such as experimental design, data analysis, or theoretical framework development.</p>
+                <p style="margin-top: 0.5rem;"><strong>Technologies/Methods:</strong> [Method 1], [Method 2], [Tool/Software 1], [Tool/Software 2]</p>
+            </div>
+            <div class="project-item">
+                <h3>[Second Research Project]</h3>
+                <div class="details">[Lab/Institution] | [Advisor: Professor Name] | [Start Date - End Date]</div>
+                <p><strong>Research Focus:</strong> Description of another research experience, including objectives, approaches, and outcomes.</p>
+                <p style="margin-top: 0.5rem;"><strong>Key Contributions:</strong> Your role and contributions to the research project.</p>
+                <p style="margin-top: 0.5rem;"><strong>Technologies/Methods:</strong> [Method 1], [Method 2], [Tool/Software 1], [Tool/Software 2]</p>
+            </div>
+            <div class="project-item">
+                <h3>[Independent Research or Third Project]</h3>
+                <div class="details">[Context] | [Date]</div>
+                <p><strong>Research Focus:</strong> Brief description of additional research work, including any independent studies or collaborative projects.</p>
+                <p style="margin-top: 0.5rem;"><strong>Key Contributions:</strong> What you accomplished and learned from this experience.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Personal Projects</h2>
+            <div class="project-item">
+                <h3>[Project Name] <a href="https://github.com/yourusername/project" target="_blank" style="font-size: 0.9rem; color: #3b82f6;">[GitHub]</a></h3>
+                <div class="details">[Date] | [Technologies Used]</div>
+                <p>Description of your personal project. Explain what problem it solves, what motivated you to build it, and what technologies or frameworks you used. Include any interesting challenges you overcame or unique features you implemented.</p>
+                <p style="margin-top: 0.5rem;"><strong>Impact/Results:</strong> Quantify results if possible (e.g., number of users, performance improvements, insights gained).</p>
+            </div>
+            <div class="project-item">
+                <h3>[Second Project Name] <a href="https://github.com/yourusername/project2" target="_blank" style="font-size: 0.9rem; color: #3b82f6;">[GitHub]</a></h3>
+                <div class="details">[Date] | [Technologies Used]</div>
+                <p>Description of another personal project. Highlight technical complexity, creative solutions, and what you learned from building it.</p>
+                <p style="margin-top: 0.5rem;"><strong>Impact/Results:</strong> Key outcomes and learnings from the project.</p>
+            </div>
+            <div class="project-item">
+                <h3>[Third Project Name] <a href="#" target="_blank" style="font-size: 0.9rem; color: #3b82f6;">[Demo/Link]</a></h3>
+                <div class="details">[Date] | [Technologies Used]</div>
+                <p>Description of a third project. This could be a hackathon project, course project, or any other technical work that showcases your skills and interests.</p>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications & Presentations</h2>
+            <div class="project-item">
+                <h3>[Paper/Poster Title]</h3>
+                <div class="details">[Conference/Journal Name] | [Date]</div>
+                <p><strong>Authors:</strong> [Your Name], [Co-author 1], [Co-author 2]</p>
+                <p style="margin-top: 0.5rem;">Brief description of the publication, poster, or presentation. Include the key findings or contributions.</p>
+                <p style="margin-top: 0.5rem;"><a href="#" target="_blank" style="color: #1e40af; text-decoration: underline;">[View Publication/Poster]</a></p>
+            </div>
+            <div class="project-item">
+                <h3>[Second Publication/Presentation]</h3>
+                <div class="details">[Conference/Journal/Event] | [Date]</div>
+                <p><strong>Authors:</strong> [Your Name], [Co-author 1]</p>
+                <p style="margin-top: 0.5rem;">Description of another publication, presentation at a conference, or academic poster.</p>
+                <p style="margin-top: 0.5rem;"><a href="#" target="_blank" style="color: #1e40af; text-decoration: underline;">[View Publication/Poster]</a></p>
+            </div>
+            <div style="padding: 1rem; background: #f8fafc; border-left: 3px solid #3b82f6; margin-top: 1rem;">
+                <p style="margin: 0; color: #666; font-size: 0.95rem;"><em>If you don't have publications yet, you can remove this section or replace it with "Presentations," "Posters," or "Writing Samples" to showcase conference presentations, research posters, or technical writing.</em></p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Research Methods</h3>
+                    <ul>
+                        <li>Experimental Design</li>
+                        <li>Data Collection & Analysis</li>
+                        <li>Statistical Analysis</li>
+                        <li>Literature Review</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming & Tools</h3>
+                    <ul>
+                        <li>Python (NumPy, Pandas, Matplotlib)</li>
+                        <li>R / MATLAB</li>
+                        <li>Git & Version Control</li>
+                        <li>Jupyter Notebooks</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Machine Learning / AI</li>
+                        <li>Data Visualization</li>
+                        <li>Scientific Computing</li>
+                        <li>Web Development</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Academic Skills</h3>
+                    <ul>
+                        <li>Technical Writing</li>
+                        <li>Research Presentation</li>
+                        <li>Collaborative Research</li>
+                        <li>Critical Analysis</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #f5f5f5;">
+                <h3 style="color: #1e40af; font-size: 1.1rem; margin-bottom: 1rem;">Education</h3>
+                <div>
+                    <p><strong>University of California, Merced</strong></p>
+                    <p style="color: #666; margin-top: 0.3rem;">B.S./B.A. in [Your Major] | Expected Graduation: [Month Year]</p>
+                    <p style="margin-top: 0.5rem;"><strong>GPA:</strong> [Your GPA] | <strong>Relevant Coursework:</strong> [Course 1], [Course 2], [Course 3]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    <a href="mailto:your.email@ucmerced.edu">your.email@ucmerced.edu</a>
+                </div>
+                <div class="contact-item">
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+                </div>
+                <div class="contact-item">
+                    <strong>LinkedIn:</strong>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Google Scholar:</strong>
+                    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">View Publications</a>
+                </div>
+                <div class="contact-item">
+                    <strong>ORCID:</strong>
+                    <a href="https://orcid.org/YOUR-ORCID-ID" target="_blank">0000-0000-0000-0000</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Location:</strong>
+                    <span>Merced, California</span>
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem; padding: 1.5rem; background: #f8fafc; border-left: 3px solid #3b82f6;">
+                <p style="margin: 0; color: #666;"><strong>Looking for research opportunities?</strong> I'm actively seeking research positions in [your field/interest]. Feel free to reach out to discuss potential collaborations or opportunities!</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Axel Muñiz Tello. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;">University of California, Merced</p>
+    </footer>
+</body>
+</html>
