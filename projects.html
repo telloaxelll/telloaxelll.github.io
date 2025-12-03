@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Axel Muñiz Tello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: #2d3748;
+            background: #ffffff;
+            min-height: 100vh;
+        }
+
+        header {
+            background: white;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.25rem;
+            font-weight: 700;
+            color: #1a202c;
+            letter-spacing: -0.02em;
+            font-family: .Inter., sans-serif;
+        }
+
+        header p {
+            font-size: 0.85rem;
+            color: #718096;
+            font-weight: 500;
+        }
+
+        nav {
+            background-color: white;
+            padding: 0.75rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1a202c;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            color: #0077b6;
+            border-bottom-color: #0077b6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        section {
+            background: white;
+            margin: 2.5rem 0;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        section:last-child {
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        section h2 {
+            color: #1a202c;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 3rem;
+            height: 3px;
+            background: #0077b6;
+            border-radius: 2px;
+        }
+
+        .project-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        .project-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .project-item h3 {
+            color: #1a202c;
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+            font-weight: 700;
+        }
+
+        .project-item .details {
+            color: #718096;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-item p {
+            color: #1a202c;
+            margin-bottom: 0.25rem;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #2d3748;
+            color: #0077b6;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 3rem;
+            border-top: 1px solid #1a202c;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #cbd5e0;
+            margin-bottom: 0.25rem;
+        }
+
+        footer p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
+            section {
+                padding: 2rem 0;
+                margin: 2rem 0;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            section h2 {
+                font-size: 1.3rem;
+            }
+
+            nav ul {
+                gap: 0.75rem;
+            }
+
+            header {
+                padding: 2rem 1rem 1.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Axel Muñiz Tello</h1>
+        <p>Undergraduate Researcher | UC Merced</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="projects">
+            <h2>Personal Projects</h2>
+            <div class="project-item">
+                <h3>Ecological Time Series Population Predictive Model</h3>
+                <div class="details">April 2025 | Python, NumPy, Pandas, Matplotlib</div>
+                <p>Developed a data-driven ecology model using the Locka-Volterra equations to simulate rabbit-bobcat dynamics. Fitted parameters to real sighting data via least-squares optimization and projected wildlife population trends. Preprocessed and interpolated sparse ecological time-series to a common grid, normalized data to avoid scale bias, and produced clean input for modeling, enabling stable parameter estimation despite noise and incomplete observations.</p>
+                <p><strong>Impact/Results:</strong> Generated and analyzed population forecasts, simulating future dynamics under different predator-to-prey ratios to predict whether bobcat population would exceed an ecological threshold (200 individuals), providing actionable insight for wildlife-management decisions.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Axel Muñiz Tello. All rights reserved.</p>
+        <p>University of California, Merced</p>
+    </footer>
+</body>
+</html>
